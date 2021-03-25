@@ -1,0 +1,31 @@
+
+<h3><i class="fa fa-angle-right"></i> Demande d'inscription des Fournisseurs</h3>
+<div class="card-body bg-light">
+
+  <table class="table table-striped">
+
+    <thead class="thead-inverse">
+    <tr>
+      <th></th>
+      <th>Nom</th>
+      <th>Prenom</th>
+      <th>Nom Commercial</th>
+      <th>action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let f of listFournisseurs" >
+      <td><img src="./assets/avatar.png" alt="user" width="90" class="rounded-circle"></td>
+      <td>{{f.nom}}</td>
+      <td>{{f.prenom}}</td>
+      <td>{{f.nomcommercial}}</td>
+      <td>
+        <button class="action-button btn-success" [routerLink]="['/temp/DemandeFour', f.idUtilisateur]"><mat-icon>remove_red_eye</mat-icon></button>
+
+      </td>
+
+
+    </tr>
+    </tbody>
+  </table>
+</div>
